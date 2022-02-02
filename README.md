@@ -1,12 +1,14 @@
 
 # Agent Migration/Merge
-
+------------------
 The merge script is intended for assisting with the console agent merge process after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so the user is able to login via IDP only.
 
-## Documentation
 
+## Documentation
+------------------
 [Click here](https://janrain.atlassian.net/wiki/spaces/GS/pages/459833359/Merging+Console+Login+Traditional+and+Custom+IDP+Logins)
 This document explains how to merge accounts one at a time. But if we have a bigger account which already has 100s of agents, the process becomes tedious. The above script automates the process.
+
 
 ## Table of Contents:
 ------------------
@@ -17,20 +19,23 @@ This document explains how to merge accounts one at a time. But if we have a big
 * [Remove Password Script](#remove-password-script)
 * [Author](#author)
 
-## Requirements
 
+## Requirements
+------------------
 * [Python](https://www.python.org/) >= 3.0
 * Cluster or app owner credentials for the metadata app - both Global(US) and China in your [.janrain-capture file](https://janrain.atlassian.net/wiki/spaces/GS/pages/166337981/Installing+Your+Cluster+Credentials+.janrain-capture+Self-Study+moved). 
 * Tool [apid-cli](https://janrain.atlassian.net/wiki/spaces/ENG/pages/5406785/apid-cli) for making API calls.
 * TXT file with all agent emails to be merged following Data Format guidelines below.
 
-### Data Format
 
+### Data Format
+------------------
 The script consumes TXT files with email id's of Agents, one in each newline. Make sure there are no spaces before and after each email id.
 See `agent.txt` for an example.
 
-## Merge Script
 
+## Merge Script
+------------------
 * This script will merge customers custom IDP with their traditional/other account.
 * Also deletes password from their traditional account for security purpose.
 
@@ -55,8 +60,9 @@ See `agent.txt` for an example.
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
 
-## Delete Users Script
 
+## Delete Users Script
+------------------
 * Sometimes users ask us to clean up/ delete large number of agents from console then you can use this script to do the same.
 
 ***Steps to execute***
@@ -73,8 +79,9 @@ See `agent.txt` for an example.
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
 
-## Remove Password Script
 
+## Remove Password Script
+------------------
 * If you have only merged the agent accounts for the first time(to confirm if its working fine) then you have to delete agent passwords/disable traditional login, remove_password.py helps with the same.
 
 ***Steps to execute***
@@ -91,7 +98,8 @@ See `agent.txt` for an example.
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
 
-## Author
 
+## Author
+------------------
 - [Pratheeksha Shetty](https://contacts.akamai.com/prashett)
 
