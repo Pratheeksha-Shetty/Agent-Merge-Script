@@ -6,7 +6,7 @@ import subprocess
 
 def delete_accounts(agent_email):
     # command to extract user info
-    cmd = "apid-cli ef user --filter \"email = '" + agent_email + "'\" -c metadata-dashboard"
+    cmd = "apid-cli ef user --filter \"email = '" + agent_email + "'\" -c metadata-dashboard" #replace with metadata-dashboard-cn for China
     print(cmd)
     returned_value = subprocess.check_output(cmd, shell=True)  # executes the command
     returned_string = returned_value.decode('utf-8')  # converts byte to string
