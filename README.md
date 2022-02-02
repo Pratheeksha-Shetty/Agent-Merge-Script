@@ -48,7 +48,7 @@ See `agent.txt` for an example.
 * agents.txt should include the agent emails as in the sample file.
 * Determine employee login IDP identifier.
    In most cases, this is some form of the agent's email address.  The easiest way to do this is to have a new user login with the IDP, then look at the 'accounts.identifier' entry in the metadata schema using an apid-cli entity.find command:
-    `apid-cli ef user --filter "email = 'new.user@customer.com'" -c metadata-dashboard`
+      `apid-cli ef user --filter "email = 'new.user@customer.com'" -c metadata-dashboard`
 * Idp value is usually something like `https://idp.com/agent.name%40customer.com`
 * Open the command prompt and cd to the above folder.
 * Run the below command:
