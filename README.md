@@ -21,7 +21,7 @@ This document explains how to merge accounts one at a time. But if we have a big
 
 * [Python](https://www.python.org/) >= 3.0
 * Cluster or app owner credentials for the metadata app - both Global(US) and China in your [.janrain-capture file](https://janrain.atlassian.net/wiki/spaces/GS/pages/166337981/Installing+Your+Cluster+Credentials+.janrain-capture+Self-Study+moved). 
-* Tool [apid-cli](https://janrain.atlassian.net/wiki/spaces/ENG/pages/5406785/apid-cli) for making API calls to manage clients and settings.
+* Tool [apid-cli](https://janrain.atlassian.net/wiki/spaces/ENG/pages/5406785/apid-cli) for making API calls.
 * TXT file with all agent emails to be merged following Data Format guidelines below.
 
 ### Data Format
