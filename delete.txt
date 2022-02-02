@@ -1,6 +1,0 @@
-abc@company.com
-def@company.com
-ghi@company.com
-jkl@company.com
-mno@company.com
-pqr@company.com
