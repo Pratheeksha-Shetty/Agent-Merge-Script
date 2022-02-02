@@ -15,6 +15,7 @@ This document explains how to merge accounts one at a time. But if we have a big
 * [Merge Script](#merge-script)
 * [Delete Users Script](#delete-users-script)
 * [Remove Password Script](#remove-password-script)
+* [Author](#author)
 
 ## Requirements
 
@@ -90,7 +91,7 @@ See `agent.txt` for an example.
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
 
-## Authors
+## Author
 
 - [Pratheeksha Shetty](https://contacts.akamai.com/prashett)
 
