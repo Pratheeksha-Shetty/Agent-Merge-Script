@@ -48,9 +48,9 @@ See `agent.txt` for an example.
 * Open the command prompt and cd to the above folder.
 * Run the below command:
 
-    python3 merge.py agents.txt "{{idp}}"
+    `python3 merge.py agents.txt "{{idp}}"`
 
-    Replace {{idp}} with proper value.
+    Replace `{{idp}}` with proper value.
 
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
@@ -68,7 +68,7 @@ See `agent.txt` for an example.
 * Open the command prompt and cd to the folder containing agents.txt and delete_users.py.
 * Run the below command:
 
-    python3 delete_users.py agent.txt
+    `python3 delete_users.py agent.txt`
 
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
@@ -86,7 +86,7 @@ See `agent.txt` for an example.
 * Open the command prompt and cd to the folder containing agents.txt and remove_password.py.
 * Run the below command:
 
-    python3 remove_password.py agent.txt
+    `python3 remove_password.py agent.txt`
 
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
