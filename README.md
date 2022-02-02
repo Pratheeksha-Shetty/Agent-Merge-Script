@@ -101,6 +101,6 @@ See `agent.txt` for an example.
 ------------------
 ## Author
 
-- [Pratheeksha Shetty](https://contacts.akamai.com/prashett)
+- [Pratheeksha Shetty](https://contacts.akamai.com/prashett). Feel free to reach out to me for bugs or improvements to the code.
 
 ------------------
