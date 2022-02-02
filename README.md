@@ -29,7 +29,7 @@ This document explains how to merge accounts one at a time. But if we have a big
 
 
 ### Data Format
-------------------
+
 The script consumes TXT files with email id's of Agents, one in each newline. Make sure there are no spaces before and after each email id.
 See `agent.txt` for an example.
 
