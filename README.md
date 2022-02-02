@@ -1,6 +1,6 @@
 
 # Agent Migration/Merge
-
+------------------
 The merge script is intended for assisting with the console agent merge process after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so the user is able to login via IDP only.
 
 ------------------
@@ -103,3 +103,4 @@ See `agent.txt` for an example.
 
 - [Pratheeksha Shetty](https://contacts.akamai.com/prashett)
 
+------------------
