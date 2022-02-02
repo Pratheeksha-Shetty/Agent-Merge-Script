@@ -1,5 +1,5 @@
 # This function deletes console users
-##Command -> python3 delete_users.py delete.txt
+##Command -> python3 delete_users.py agent.txt
 import json
 import argparse
 import subprocess
