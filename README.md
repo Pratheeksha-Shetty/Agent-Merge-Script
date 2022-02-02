@@ -5,7 +5,7 @@ The merge script is intended for assisting with the console agent merge process 
 
 ## Documentation
 
-[Documentation](https://janrain.atlassian.net/wiki/spaces/GS/pages/459833359/Merging+Console+Login+Traditional+and+Custom+IDP+Logins)
+[Click here](https://janrain.atlassian.net/wiki/spaces/GS/pages/459833359/Merging+Console+Login+Traditional+and+Custom+IDP+Logins)
 This document explains how to merge accounts one at a time. But if we have a bigger account which already has 100s of agents, the process becomes tedious. The above script automates the process.
 
 ## Table of Contents:
