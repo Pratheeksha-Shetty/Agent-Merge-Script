@@ -1,7 +1,7 @@
 
 # Agent Migration/Merge
 
-The merge script is intended for assisting with the console agent merge process after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we PS have to delete the password from traditional login, so that the user is able to login via IDP only.
+The merge script is intended for assisting with the console agent merge process after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so that the user is able to login via IDP only.
 
 ## Documentation
 
@@ -12,20 +12,9 @@ This document explains how to merge accounts one at a time. But if we have a big
 ------------------
 * [Requirements](#requirements)
     * [Data Format](#data-format)
-* [Data Load](#data-load)
-    * [Dataload Command Line](#dataload-command-line)
-    * [Delta Migration](#delta-migration)
-    * [Live Run](#live-run)
-    * [Result Logs](#result-logs)
-    * [Data Transformations](#data-transformations)
-    * [Logging](#logging)
-* [Tips and Best Practices](#tips-and-best-practices)
-* [Sample Generator](#sample-generator)
-    * [Sample Config file](#sample-config-file)
-    * [Sample Generator Command Line](#sample-generator-command-line)
-    * [Sample Generator Random Values](#sample-generator-random-values)
-* [Rollback](#rollback)
-    * [Rollback Command Line](#rollback-command-line)
+* [Merge Script](#merge-script)
+* [Delete Users Script](#delete-users-script)
+* [Remove Password Script](#remove-password-script)
 
 ## Requirements
 
