@@ -1,6 +1,6 @@
 # This function will merge customers custom IDP with their traditional/other account.
 # Also deletes password from their traditional account for security purpose.
-#Command -> python3 merge.py agents.txt "idp"
+#Command -> python3 bulk_merge_agents.py agents.txt "idp"
 import json
 import argparse
 import subprocess
