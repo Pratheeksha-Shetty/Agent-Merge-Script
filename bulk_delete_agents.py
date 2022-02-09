@@ -1,5 +1,5 @@
 # This function deletes console users
-##Command -> python3 delete_users.py agent.txt
+##Command -> python3 bulk_delete_agents.py agent.txt
 import json
 import argparse
 import subprocess
@@ -16,7 +16,7 @@ def delete_accounts(agent_email):
         print("No user with email " + agent_email + " found!")
         return
     id = str(response_dict['results'][0]['id'])
-    cmd2 = 'apid-cli ed user -c metadata-dashboard --id ' + id  # Command to delete user
+    cmd2 = 'apid-cli ed user -c metadata-dashboard --id ' + id  # Command to delete agent
     print(cmd2)
     response = subprocess.check_output(cmd2, shell=True)
     response = response.decode('utf-8')
