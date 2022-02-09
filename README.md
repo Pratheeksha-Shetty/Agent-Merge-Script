@@ -1,7 +1,10 @@
 
-# Agent Migration/Merge
+# Console Agent Scripts
 ------------------
-The merge script is intended for assisting with the console agent merge process after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so the user is able to login via IDP only.
+This page consisits of 3 scripts:
+* The bulk_merge_agents.py script is intended for assisting with the console agent merge process in bulk after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so the user is able to login via IDP only.
+* The bulk_delete_agents.py bulk deletes agents from console.
+* The bulk_remove_agent_password.py bulk deletes agent passwords/disable traditional login.
 
 ------------------
 ## Documentation
@@ -41,10 +44,10 @@ See `agent.txt` for an example.
 
 ***Steps to execute***
 
-* Download or copy the script from Github into a file and name it as merge.py and place it in the same folder as agents.txt.
+* Download or copy the script from Github into a file and name it as bulk_merge_agents.py and place it in the same folder as agents.txt.
 * Make sure that you have saved "metadata-dashboard" credentials in your .janrain-capture. Change in the script or .janrain-capture if you have saved the credentials as dashboard-metadata.
 * If you are working on CN console then in the script change "metadata-dashboard" to "metadata-dashboard-cn" or whatever that you have saved as in your .janrain-capture file.
-* Comment the "disable_traditional_login(id)" function in line 26 if you are only looking to Merge the accounts and not to delete the traditional password. You can later use "remove_password.py" script to delete password. 
+* Comment the "disable_traditional_login(id)" function in line 26 if you are only looking to Merge the accounts and not to delete the traditional password. You can later use "bulk_remove_agent_password.py" script to delete password. 
 * agents.txt should include the agent emails as in the sample file.
 * Determine employee login IDP identifier.
    In most cases, this is some form of the agent's email address.  The easiest way to do this is to have a new user login with the IDP, then look at the 'accounts.identifier' entry in the metadata schema using an apid-cli entity.find command:
@@ -53,7 +56,7 @@ See `agent.txt` for an example.
 * Open the command prompt and cd to the above folder.
 * Run the below command:
 
-    `python3 merge.py agents.txt "{{idp}}"`
+    `python3 bulk_merge_agents.py agents.txt "{{idp}}"`
 
     Replace `{{idp}}` with proper value.
 
@@ -63,18 +66,18 @@ See `agent.txt` for an example.
 ------------------
 ## Delete Users Script
 
-* Sometimes users ask us to clean up/ delete large number of agents from console then you can use this script to do the same.
+* Customers ask us to clean up/ delete large number of agents from console then you can use this script to do the same.
 
 ***Steps to execute***
 
-* Download or copy the script from Github into a file and name it as delete_users.py and place it in the same folder as agents.txt.
+* Download or copy the script from Github into a file and name it as bulk_delete_agents.py and place it in the same folder as agents.txt.
 * Make sure that you have saved "metadata-dashboard" credentials in your .janrain-capture. Change in the script or .janrain-capture if you have saved the credentials as dashboard-metadata.
 * If you are working on CN console then in the script change "metadata-dashboard" to "metadata-dashboard-cn" or whatever that you have saved as in your .janrain-capture file.
 * agents.txt should include the agent emails as in the sample file.
-* Open the command prompt and cd to the folder containing agents.txt and delete_users.py.
+* Open the command prompt and cd to the folder containing agents.txt and bulk_delete_agents.py.
 * Run the below command:
 
-    `python3 delete_users.py agent.txt`
+    `python3 bulk_delete_agents.py agent.txt`
 
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
@@ -82,18 +85,18 @@ See `agent.txt` for an example.
 ------------------
 ## Remove Password Script
 
-* If you have only merged the agent accounts for the first time(to confirm if its working fine) then you have to delete agent passwords/disable traditional login, remove_password.py helps with the same.
+* If you have only merged the agent accounts for the first time(to confirm if its working fine) then you have to delete agent passwords/disable traditional login, bulk_remove_agent_password.py helps with the same.
 
 ***Steps to execute***
 
-* Download or copy the script from Github into a file and name it as remove_password.py and place it in the same folder as agents.txt.
+* Download or copy the script from Github into a file and name it as bulk_remove_agent_password.py and place it in the same folder as agents.txt.
 * Make sure that you have saved "metadata-dashboard" credentials in your .janrain-capture. Change in the script or .janrain-capture if you have saved the credentials as dashboard-metadata.
 * If you are working on CN console then in the script change "metadata-dashboard" to "metadata-dashboard-cn" or whatever that you have saved as in your .janrain-capture file.
 * agents.txt should include the agent emails as in the sample file.
-* Open the command prompt and cd to the folder containing agents.txt and remove_password.py.
+* Open the command prompt and cd to the folder containing agents.txt and bulk_remove_agent_password.py.
 * Run the below command:
 
-    `python3 remove_password.py agent.txt`
+    `python3 bulk_remove_agent_password.py agent.txt`
 
 * Script will take sometime to complete and you can see the command being executed in the prompt.
 * If the email address is present in metadata-dashboard then the Count result will be >0. If its 0 then you will see "No user with email "xyz" found" printed and the script continues with the next email.
