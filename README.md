@@ -2,7 +2,7 @@
 # Console Agent Scripts
 ------------------
 This page consisits of 3 scripts:
-* The bulk_merge_agents.py script is intended for assisting with the console agent merge process in bulk after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so the user is able to login via IDP only.
+* The bulk_merge_agents.py script is intended to assist with the console agent merge process in bulk after creating a custom console login page like https://company.janrain.com. Existing agents who have traditional login in https://console.janrain.com, cannot access the Custom Console page as console does not support Merging Traditional and Social logins. We PS need to merge the traditional and IDP accounts internally first. If everything works fine, we have to delete the password from traditional login, so the user is able to login via IDP only.
 * The bulk_delete_agents.py bulk deletes agents from console.
 * The bulk_remove_agent_password.py bulk deletes agent passwords/disable traditional login.
 
