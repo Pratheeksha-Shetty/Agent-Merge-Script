@@ -1,5 +1,5 @@
 # This function deletes password from their traditional account for security purpose.
-#Command -> python3 remove_password.py agents.txt
+#Command -> python3 bulk_remove_agent_password.py agents.txt
 import json
 import argparse
 import subprocess
