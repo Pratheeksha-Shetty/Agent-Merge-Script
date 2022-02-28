@@ -22,15 +22,14 @@ def merge_accounts(agent_email, new_idp):
     response = subprocess.check_output(cmd2, shell=True)
     response = response.decode('utf-8')
     print(response)
-    id = response_dict['results'][0]['id']
-    disable_traditional_login(id)  # separating delete password fun, comment this line if you only want to merge
+    disable_traditional_login(uuid)  # separating delete password fun, comment this line if you only want to merge
     return
 
 
 # function to delete password/ disable traditional account
-def disable_traditional_login(id):
-    id = str(id)
-    cmd = "apid-cli eu user '{\"password\": null}' --id " + id + " -c metadata-dashboard"
+def disable_traditional_login(uuid):
+    uuid = str(uuid)
+    cmd = "apid-cli eu user '{\"password\": null}' --uuid " + uuid + " -c metadata-dashboard"
     print(cmd)
     returned_value = subprocess.check_output(cmd, shell=True)
     returned_string = returned_value.decode('utf-8')
