@@ -15,8 +15,8 @@ def delete_accounts(agent_email):
     if response_dict['result_count'] == 0:
         print("No user with email " + agent_email + " found!")
         return
-    id = str(response_dict['results'][0]['id'])
-    cmd2 = 'apid-cli ed user -c metadata-dashboard --id ' + id  # Command to delete agent
+    uuid = str(response_dict['results'][0]['uuid'])
+    cmd2 = 'apid-cli ed user -c metadata-dashboard --uuid ' + uuid  # Command to delete agent
     print(cmd2)
     response = subprocess.check_output(cmd2, shell=True)
     response = response.decode('utf-8')
