@@ -15,9 +15,9 @@ def disable_traditional_login(agent_email):
     if response_dict['result_count'] == 0:  # checking if user doesn't exist
         print("No user with email " + agent_email + " found!")
         return
-    id = response_dict['results'][0]['id']
-    id = str(id)
-    cmd = "apid-cli eu user '{\"password\": null}' --id " + id + " -c metadata-dashboard" #replace with metadata-dashboard-cn for China
+    uuid = response_dict['results'][0]['uuid']
+    uuid = str(uuid)
+    cmd = "apid-cli eu user '{\"password\": null}' --uuid " + uuid + " -c metadata-dashboard" #replace with metadata-dashboard-cn for China
     print(cmd,"\n")
     returned_value = subprocess.check_output(cmd, shell=True)
     returned_string = returned_value.decode('utf-8')
